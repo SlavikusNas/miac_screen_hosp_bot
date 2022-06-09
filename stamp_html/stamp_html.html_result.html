@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Microsoft Office User" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      td.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:2px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style1 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:2px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style2 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style4 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style5 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:2px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style5 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:2px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style6 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style6 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style7 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      th.style7 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      td.style8 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      th.style8 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      td.style9 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #CCCCCC !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      th.style9 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #CCCCCC !important; border-right:2px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      td.style10 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      th.style10 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:#EFEFEF }
+      td.style11 { vertical-align:top; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style11 { vertical-align:top; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style12 { vertical-align:bottom; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style12 { vertical-align:bottom; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style13 { vertical-align:bottom; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style13 { vertical-align:bottom; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style14 { vertical-align:top; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style14 { vertical-align:top; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      td.style15 { vertical-align:bottom; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:2px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      th.style15 { vertical-align:bottom; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:2px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:16pt; background-color:white }
+      table.sheet0 col.col0 { width:77.26666578pt }
+      table.sheet0 col.col1 { width:66.42222146pt }
+      table.sheet0 col.col2 { width:50.15555498pt }
+      table.sheet0 col.col3 { width:50.15555498pt }
+      table.sheet0 col.col4 { width:66.42222146pt }
+      table.sheet0 col.col5 { width:117.93333198pt }
+      table.sheet0 col.col6 { width:66.42222146pt }
+      table.sheet0 col.col7 { width:66.42222146pt }
+      table.sheet0 col.col8 { width:78.62222132pt }
+      table.sheet0 col.col9 { width:66.42222146pt }
+      table.sheet0 col.col10 { width:50.15555498pt }
+      table.sheet0 col.col11 { width:50.15555498pt }
+      table.sheet0 col.col12 { width:66.42222146pt }
+      table.sheet0 col.col13 { width:117.93333198pt }
+      table.sheet0 col.col14 { width:66.42222146pt }
+      table.sheet0 col.col15 { width:66.42222146pt }
+      table.sheet0 tr { height:16.363636363636pt }
+      table.sheet0 tr.row0 { height:145.5pt }
+      table.sheet0 tr.row1 { height:21pt }
+      table.sheet0 tr.row2 { height:21pt }
+      table.sheet0 tr.row3 { height:21pt }
+      table.sheet0 tr.row4 { height:21pt }
+      table.sheet0 tr.row5 { height:21pt }
+      table.sheet0 tr.row6 { height:21pt }
+      table.sheet0 tr.row7 { height:21pt }
+      table.sheet0 tr.row8 { height:36pt }
+      table.sheet0 tr.row9 { height:21.75pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <col class="col4">
+        <col class="col5">
+        <col class="col6">
+        <col class="col7">
+        <col class="col8">
+        <col class="col9">
+        <col class="col10">
+        <col class="col11">
+        <col class="col12">
+        <col class="col13">
+        <col class="col14">
+        <col class="col15">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style7 s">(09.05 - 15.05)</td>
+            <td class="column1 style8 s">Число <br />
+впервые <br />
+госпитализированных на койки пневмония <br />
+и COVID</td>
+            <td class="column2 style9 s">В том числе по скорой</td>
+            <td class="column3 style9 s">В том числе самоход</td>
+            <td class="column4 style9 s">Выбыло <br />
+(без учета перевода)*</td>
+            <td class="column5 style9 s">Динамика <br />
+между <br />
+поступившими <br />
+и выбывшими (с <br />
+учетом <br />
+выбывших <br />
+с коек для <br />
+выздоравливающих)</td>
+            <td class="column6 style9 s">Переведено на койки для выздоравливающих</td>
+            <td class="column7 style9 s">Динамика между поступившими, выбывшими, переведенными</td>
+            <td class="column8 style10 s">(16.05 - 22.05)</td>
+            <td class="column9 style8 s">Число <br />
+впервые <br />
+госпитализированных на койки пневмония <br />
+и COVID</td>
+            <td class="column10 style9 s">В том числе по скорой</td>
+            <td class="column11 style9 s">В том числе самоход</td>
+            <td class="column12 style9 s">Выбыло <br />
+(без учета перевода)*</td>
+            <td class="column13 style9 s">Динамика <br />
+между <br />
+поступившими <br />
+и выбывшими (с <br />
+учетом <br />
+выбывших <br />
+с коек для <br />
+выздоравливающих)</td>
+            <td class="column14 style9 s">Переведено на койки для выздоравливающих</td>
+            <td class="column15 style9 s">Динамика между поступившими, выбывшими, переведенными</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style1 s">ПН</td>
+            <td class="column1 style2 s">58</td>
+            <td class="column2 style2 s">57</td>
+            <td class="column3 style2 s">1</td>
+            <td class="column4 style2 s">38</td>
+            <td class="column5 style2 s">20</td>
+            <td class="column6 style2 s">0</td>
+            <td class="column7 style2 s">19</td>
+            <td class="column8 style3 s">ПН</td>
+            <td class="column9 style2 s">62</td>
+            <td class="column10 style2 s">60</td>
+            <td class="column11 style2 s">2</td>
+            <td class="column12 style2 s">71</td>
+            <td class="column13 style2 s">-9</td>
+            <td class="column14 style2 s">0</td>
+            <td class="column15 style4 s">-11</td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style1 s">ВТ</td>
+            <td class="column1 style2 s">60</td>
+            <td class="column2 style2 s">59</td>
+            <td class="column3 style2 s">1</td>
+            <td class="column4 style2 s">52</td>
+            <td class="column5 style2 s">8</td>
+            <td class="column6 style2 s">0</td>
+            <td class="column7 style2 s">7</td>
+            <td class="column8 style3 s">ВТ</td>
+            <td class="column9 style2 s">47</td>
+            <td class="column10 style2 s">46</td>
+            <td class="column11 style2 s">1</td>
+            <td class="column12 style2 s">54</td>
+            <td class="column13 style2 s">-7</td>
+            <td class="column14 style2 s">0</td>
+            <td class="column15 style4 s">-8</td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style1 s">СР</td>
+            <td class="column1 style2 s">55</td>
+            <td class="column2 style2 s">54</td>
+            <td class="column3 style2 s">1</td>
+            <td class="column4 style2 s">82</td>
+            <td class="column5 style2 s">-27</td>
+            <td class="column6 style2 s">0</td>
+            <td class="column7 style2 s">-28</td>
+            <td class="column8 style3 s">СР</td>
+            <td class="column9 style2 s">46</td>
+            <td class="column10 style2 s">45</td>
+            <td class="column11 style2 s">1</td>
+            <td class="column12 style2 s">39</td>
+            <td class="column13 style2 s">7</td>
+            <td class="column14 style2 s">0</td>
+            <td class="column15 style4 s">7</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style1 s">ЧТ</td>
+            <td class="column1 style2 s">47</td>
+            <td class="column2 style2 s">40</td>
+            <td class="column3 style2 s">7</td>
+            <td class="column4 style2 s">58</td>
+            <td class="column5 style2 s">-11</td>
+            <td class="column6 style2 s">0</td>
+            <td class="column7 style2 s">-11</td>
+            <td class="column8 style3 s">ЧТ</td>
+            <td class="column9 style2 s">38</td>
+            <td class="column10 style2 s">36</td>
+            <td class="column11 style2 s">2</td>
+            <td class="column12 style2 s">43</td>
+            <td class="column13 style2 s">-5</td>
+            <td class="column14 style2 s">0</td>
+            <td class="column15 style4 s">-5</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0 style1 s">ПТ</td>
+            <td class="column1 style2 s">77</td>
+            <td class="column2 style2 s">74</td>
+            <td class="column3 style2 s">3</td>
+            <td class="column4 style2 s">89</td>
+            <td class="column5 style2 s">-12</td>
+            <td class="column6 style2 s">0</td>
+            <td class="column7 style2 s">-15</td>
+            <td class="column8 style3 s">ПТ</td>
+            <td class="column9 style2 s"></td>
+            <td class="column10 style2 s"></td>
+            <td class="column11 style2 s"></td>
+            <td class="column12 style2 s"></td>
+            <td class="column13 style2 s"></td>
+            <td class="column14 style2 s"></td>
+            <td class="column15 style4 s"></td>
+          </tr>
+          <tr class="row6">
+            <td class="column0 style1 s">СБ</td>
+            <td class="column1 style2 s">53</td>
+            <td class="column2 style2 s">50</td>
+            <td class="column3 style2 s">3</td>
+            <td class="column4 style2 s">57</td>
+            <td class="column5 style2 s">-4</td>
+            <td class="column6 style2 s">0</td>
+            <td class="column7 style2 s">-7</td>
+            <td class="column8 style3 s">СБ</td>
+            <td class="column9 style2 s"></td>
+            <td class="column10 style2 s"></td>
+            <td class="column11 style2 s"></td>
+            <td class="column12 style2 s"></td>
+            <td class="column13 style2 s"></td>
+            <td class="column14 style2 s"></td>
+            <td class="column15 style4 s"></td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style1 s">ВС</td>
+            <td class="column1 style2 s">52</td>
+            <td class="column2 style2 s">47</td>
+            <td class="column3 style2 s">5</td>
+            <td class="column4 style2 s">50</td>
+            <td class="column5 style2 s">2</td>
+            <td class="column6 style2 s">0</td>
+            <td class="column7 style2 s">-3</td>
+            <td class="column8 style3 s">ВС</td>
+            <td class="column9 style2 s"></td>
+            <td class="column10 style2 s"></td>
+            <td class="column11 style2 s"></td>
+            <td class="column12 style2 s"></td>
+            <td class="column13 style2 s"></td>
+            <td class="column14 style2 s"></td>
+            <td class="column15 style4 s"></td>
+          </tr>
+          <tr class="row8">
+            <td class="column0 style5 s">Всего за неделю</td>
+            <td class="column1 style6 s">402</td>
+            <td class="column2 style6 s">381</td>
+            <td class="column3 style6 s">21</td>
+            <td class="column4 style6 s">426</td>
+            <td class="column5 style6 s">-24</td>
+            <td class="column6 style6 s">0</td>
+            <td class="column7 style6 s">-38</td>
+            <td class="column8 style3 s">Всего за неделю</td>
+            <td class="column9 style2 s">193</td>
+            <td class="column10 style2 s">187</td>
+            <td class="column11 style2 s">6</td>
+            <td class="column12 style2 s">207</td>
+            <td class="column13 style2 s">-14</td>
+            <td class="column14 style2 s">0</td>
+            <td class="column15 style4 s">-17</td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style11 s style13" colspan="8">*выбыло, в том числе с коек для выздоравливающих</td>
+            <td class="column8 style14 s style15" colspan="8">*выбыло, в том числе с коек для выздоравливающих</td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
