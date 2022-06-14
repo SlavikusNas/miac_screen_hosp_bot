@@ -58,8 +58,8 @@ class Table_to_HTML:
             self.df[column] = self.df[column].apply(lambda x: x.replace(r' (24:00)', '') if type(x) is str else x)
 
         # Фиксируем порядок столбцов
-        cols = ['week_ago_week_day_time', 'covid_y', 'smp_y', 'himself_y', 'getout_y', 'move_y', 'dyn_y', 'dyn_all_y',
-                'week_last_week_day_time', 'covid_x', 'smp_x', 'himself_x', 'getout_x', 'move_x', 'dyn_x', 'dyn_all_x']
+        cols = ['week_ago_week_day_time', 'covid_y', 'smp_y', 'himself_y', 'getout_y', 'dyn_all_y', 'move_y', 'dyn_y',
+                'week_last_week_day_time', 'covid_x', 'smp_x', 'himself_x', 'getout_x', 'dyn_all_x', 'move_x', 'dyn_x']
         self.df = self.df[cols].fillna('')
 
         # Переводим все численные показатели в целое число, если оно не является строкой
@@ -122,7 +122,7 @@ class Table_to_HTML:
         conf = configparser.ConfigParser()
         conf.read('config.ini')
         conf = conf['CUT_IMAGE']
-        crop_param_big = (int(conf['x1_small']), int(conf['y1_small']), int(conf['x2_small']), int(conf['y2_small']))
+        crop_param_big = (int(conf['x1_big']), int(conf['y1_big']), int(conf['x2_big']), int(conf['y2_big']))
         crop_param_small = (int(conf['x1_small']), int(conf['y1_small']), int(conf['x2_small']), int(conf['y2_small']))
 
         with Image.open(f'{self.result_html_big}.png') as img:
@@ -131,7 +131,7 @@ class Table_to_HTML:
         with Image.open(f'{self.result_html_small}.png') as img:
             img = img.crop(crop_param_small)
             img.save(f'{self.result_html_small}.png')
-        print(1)
+        # print(1)
 
 
 if __name__ == '__main__':

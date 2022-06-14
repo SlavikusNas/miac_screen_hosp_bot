@@ -55,6 +55,9 @@ class BI_Report_Hospital_on_hour:
         self.report_bi['time'] = pd.to_datetime(self.report_bi['time_t'], format='%H:%M', errors='coerce').dt.hour
         self.report_bi['time'] = np.where(self.report_bi['time_t'] == 'сутки', 24, self.report_bi['time'])
 
+        # self.report_bi['dyn'] = self.report_bi['smp'] - self.report_bi['getout']
+        # self.report_bi['dyn_all'] = self.report_bi['covid'] - self.report_bi['getout']
+
     def create_stamp_week_table(self):
         """
         Формирование шаблона таблицы с заданными периодами,
