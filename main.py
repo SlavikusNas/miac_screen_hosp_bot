@@ -32,7 +32,7 @@ class HOSP_WEEK_TABLE:
 
     def telegram_chat_send(self):
         tb = tele_bot.Telebot_send
-        if self.time_now < 9:
+        if self.time_now <= 7:
             tb('stamp_html.png')
             tb('stamp_html_small.png')
         else:
@@ -41,6 +41,11 @@ class HOSP_WEEK_TABLE:
 
 
 if __name__ == '__main__':
-    dt_now = date.today() - timedelta(days=1)
     tm_now = time(datetime.now().hour, 0).hour
+    # Если время 7 или менее часов - отправляется скриншот за предыдущие сутки
+    if tm_now <= 7:
+        dt_now = date.today() - timedelta(days=1)
+    # Если время более 7 часов - отправляется скриншот на текущие сутки
+    else:
+        dt_now = date.today()
     main = HOSP_WEEK_TABLE(date_now=dt_now, time_now=tm_now, send_telegram=True)

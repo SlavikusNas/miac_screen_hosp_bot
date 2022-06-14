@@ -78,13 +78,16 @@ class BI_Report_Hospital_on_hour:
         # Таблица с периодами на текущую дату с указанием времени
         stamp_time = stamp.copy()
         # Добавляем время на текущий день, предыдущие день и аналогичный день предыдущей недели
-        now_week_day = self.DATE_NOW.weekday()  # Номер текущего дня недели начиная с 0
+        # now_week_day = self.DATE_NOW.weekday()  # Номер текущего дня недели начиная с 0
+        week_date_for_time = [
+            (self.DATE_NOW.strftime('%Y-%m-%d')),
+            (self.DATE_NOW - timedelta(days=1)).strftime('%Y-%m-%d'),
+            (self.DATE_NOW - timedelta(days=7)).strftime('%Y-%m-%d')
+        ]
         stamp_time['week_last_time'] = \
-            np.where(stamp['week_last_week_day'] == now_week_day, self.TIME_NOW, stamp_time['week_last_time'])
-        stamp_time['week_last_time'] = \
-            np.where(stamp['week_last_week_day'] == now_week_day - 1, self.TIME_NOW, stamp_time['week_last_time'])
+            np.where(stamp['week_last'].isin(week_date_for_time), self.TIME_NOW, stamp_time['week_last_time'])
         stamp_time['week_ago_time'] = \
-            np.where(stamp['week_ago_week_day'] == now_week_day, self.TIME_NOW, stamp_time['week_ago_time'])
+            np.where(stamp['week_ago'].isin(week_date_for_time), self.TIME_NOW, stamp_time['week_ago_time'])
         return stamp, stamp_time
 
     def create_table(self):
